@@ -29,7 +29,7 @@ public class OwnerController {
     // GET : read a single owner
     // EXAMPLE : GET localhost:8080//mka/v1/owner/1
     @GetMapping("/mka/v1/owners/{id}")
-    public Owner getDepartment(@PathVariable(value = "id") Integer owner_id) throws OwnerNotFoundException {
+    public Owner getOwner(@PathVariable(value = "id") Integer owner_id) throws OwnerNotFoundException {
         return ownerRepository.findById(owner_id)
                 .orElseThrow(() -> new OwnerNotFoundException(owner_id));
     }
@@ -38,7 +38,7 @@ public class OwnerController {
     // EXAMPLE : POST localhost:8080//mka/v1/owners/ + json data
     @PostMapping(value = "/mka/v1/owners/",consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public Owner createDepartment(@Valid @RequestBody Owner owner) {
+    public Owner createOwner(@Valid @RequestBody Owner owner) {
         return ownerRepository.save(owner);
     }
 
@@ -46,7 +46,7 @@ public class OwnerController {
     // EXAMPLE : PUT localhost:8080//mka/v1/owner/1
     @PutMapping(value="/mka/v1/owner/{id}",consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public Owner updateDepartment(@PathVariable(value = "id") Integer owner_id,
+    public Owner updateOwner(@PathVariable(value = "id") Integer owner_id,
                                        @Valid @RequestBody Owner ownerDetails) throws OwnerNotFoundException {
 
         Owner owner = ownerRepository.findById(owner_id)
@@ -62,7 +62,7 @@ public class OwnerController {
     // DELETE : delete an owner
     // EXAMPLE : DELETE localhost:8080//mka/v1/owner/1
     @DeleteMapping("/mka/v1/owner/{id}")
-    public Map<String, Boolean> deleteDepartment(@PathVariable(value = "id") Integer owner_id) throws OwnerNotFoundException {
+    public Map<String, Boolean> deleteOwner(@PathVariable(value = "id") Integer owner_id) throws OwnerNotFoundException {
         Owner owner = ownerRepository.findById(owner_id)
                 .orElseThrow(() -> new OwnerNotFoundException(owner_id));
 
