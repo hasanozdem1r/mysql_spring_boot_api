@@ -1,4 +1,4 @@
-
+![](https://miro.medium.com/max/700/1*-uckV8DOh3l0bCvqZ73zYg.png)
 # Spring Boot Web Application
 
 This project aiming to show how to configure Spring Boot MVC pattern with MySQL Server
@@ -51,14 +51,9 @@ This project aiming to show how to configure Spring Boot MVC pattern with MySQL 
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
+See [`contributing.md`](CONTRIBUTING.md) for ways to get started.
 
-Please adhere to this project's `code of conduct`.
-
-
-## Support
-
-For support, you can [buy me a coffee](https://www.buymeacoffee.com/hasanozdemir).
+Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 
 ## Resources
