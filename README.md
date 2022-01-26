@@ -1,4 +1,4 @@
-![](https://miro.medium.com/max/700/1*-uckV8DOh3l0bCvqZ73zYg.png)
+![](docs/static/spring_boot_project.png)
 # Spring Boot Web Application
 
 This project aiming to show how to configure Spring Boot MVC pattern with MySQL Server

@@ -5,7 +5,6 @@ import mka.root.exceptions.ProductNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.http.ResponseEntity;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
