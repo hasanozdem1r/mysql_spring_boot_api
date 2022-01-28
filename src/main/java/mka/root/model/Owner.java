@@ -2,14 +2,17 @@ package mka.root.model;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.Date;
+import java.util.Objects;
+/*
+Created by @hasanozdem1r 01/27/2022
+ */
 
 
 @Entity
 @Table(name = "owners")
 public class Owner {
-    @PositiveOrZero
     @NotNull
-    @Id
+    @Id // JPA annotation to indicate the primary key and automatically populated by the JPA provider.
     private Integer owner_id;
     @NotBlank
     private String owner_full_name;
@@ -28,6 +31,22 @@ public class Owner {
         this.owner_email=owner_email;
         this.owner_registration_date=owner_registration_date;
     }
+
+    // equals and hashCode methods
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Owner)) return false;
+        Owner owner = (Owner) o;
+        return owner_id.equals(owner.owner_id) && owner_full_name.equals(owner.owner_full_name) && owner_email.equals(owner.owner_email) && owner_registration_date.equals(owner.owner_registration_date);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(owner_id, owner_full_name, owner_email, owner_registration_date);
+    }
+
 
     // Getter & Setter for Owner Model Class
 
